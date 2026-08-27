@@ -88,7 +88,7 @@ button {
   position: relative;
   height: 1200px;
   width: 100%;
-  background: #795fff;
+  background: #3a2d7a;
   overflow: hidden;
 }
 .hero-bg-photo {
@@ -104,7 +104,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,#bfacff 0%, #795fff 100%);
+  background: linear-gradient(to top,#4531a8 0%, #3a2d7a 100%);
   opacity: .95;
   z-index: 1;
 }
@@ -143,7 +143,7 @@ button {
 }
 .hero-form .field.select {
   background: #f9f9ff;
-  color: #777;
+  color: #555;
   font-size: 14px;
   position: relative;
   flex: 1.15;
@@ -183,7 +183,7 @@ button {
 }
 .field-dropdown div:hover {
   background: #f9f9ff;
-  color: #3bb9cc;
+  color: #106b7d;
 }
 
 .modal-overlay {
@@ -227,7 +227,7 @@ button {
   width: 100%;
   height: 44px;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   border-radius: 4px;
   font-size: 14px;
   text-transform: uppercase;
@@ -240,13 +240,13 @@ button {
   width: 28px;
   height: 28px;
   cursor: pointer;
-  color: #999;
+  color: #6b6b6b;
   font-size: 20px;
   line-height: 1;
 }
 .modal-note {
   font-size: 12px;
-  color: #999;
+  color: #6b6b6b;
   margin-top: 14px;
   text-align: center;
 }
@@ -255,7 +255,7 @@ button {
   height: 40px;
   padding: 0 24px;
   gap: 8px;
-  color: #fff;
+  color: #222222;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -303,6 +303,7 @@ button {
 }
 .nav .cta {
   background: #49e4fa;
+  color: #222222;
   padding: 0;
 }
 .nav .cta + .cta {
@@ -342,7 +343,7 @@ button {
 }
 .feature-card p {
   font-size: 14px;
-  color: #777777;
+  color: #707070;
   line-height: 1.6;
 }
 
@@ -399,7 +400,7 @@ button {
 }
 .pp-card p {
   font-size: 14px;
-  color: #777777;
+  color: #aaaaaa;
   line-height: 1.55;
 }
 .pp-card .pp-btn {
@@ -407,7 +408,7 @@ button {
   width: 100%;
   text-align: center;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -447,7 +448,7 @@ button {
   font-size: 14px;
   line-height: 22.75px;
   letter-spacing: 0;
-  color: #777777;
+  color: #707070;
 }
 .cat-grid {
   gap: 30px;
@@ -541,7 +542,7 @@ button {
 }
 .job-desc {
   font-size: 14px;
-  color: #777777;
+  color: #707070;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -579,7 +580,7 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 22.75px;
-  color: #777777;
+  color: #707070;
 }
 .job-card .job-nature {
   position: absolute;
@@ -639,7 +640,7 @@ button {
   border: 1px solid #eeeeee;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #777777;
+  color: #707070;
 }
 .job-tags-col .tag-art {
   width: 51.19px;
@@ -687,7 +688,7 @@ button {
   justify-content: center;
   margin: 35px auto 0;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   width: 200px;
   height: 38.75px;
   font-family: 'Poppins', sans-serif;
@@ -718,7 +719,7 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 22.75px;
-  color: #777777;
+  color: #707070;
   height: 42.75px;
   margin-bottom: 10px;
 }
@@ -743,7 +744,7 @@ button {
   left: 25px;
   width: 300px;
   height: 120px;
-  background: linear-gradient(135deg,#a99cff,#795fff);
+  background: linear-gradient(135deg,#4531a8,#3a2d7a);
   color: #fff;
   font-weight: 600;
   font-size: 22px;
@@ -792,7 +793,7 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 22.75px;
-  color: #777777;
+  color: #707070;
 }
 .top-post-body .job-nature {
   position: absolute;
@@ -844,7 +845,7 @@ button {
   height: 44.75px;
   margin: 0;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -879,7 +880,15 @@ button {
   background-size: cover;
   background-position: center;
 }
+.blog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+}
 .blog-card h4 {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
@@ -937,7 +946,7 @@ button {
 .cta {
   position: relative;
   height: 418.7px;
-  background: linear-gradient(0deg,#bfacff 0%, #795fff 100%);
+  background: linear-gradient(0deg,#4531a8 0%, #3a2d7a 100%);
   text-align: center;
   color: #fff;
 }
@@ -977,7 +986,7 @@ button {
   height: 44px;
   box-sizing: border-box;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1047,7 +1056,7 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 22.75px;
-  color: #777777;
+  color: #707070;
 }
 .store-btn {
   position: absolute;
@@ -1151,7 +1160,7 @@ button {
   border-radius: 20px;
   padding: 0 20px;
   font-size: 14px;
-  color: #777;
+  color: #707070;
   font-family: inherit;
 }
 .newsletter-form button {
@@ -1159,7 +1168,7 @@ button {
   height: 44px;
   flex: none;
   background: #49e4fa;
-  color: #fff;
+  color: #222222;
   border-radius: 25px;
   padding: 0 24px;
   font-size: 14px;
@@ -1193,7 +1202,7 @@ button {
   gap: 0;
 }
 .social-links {
-  gap: 3.84px;
+  gap: 10px;
 }
 .social-links a {
   width: 40px;
