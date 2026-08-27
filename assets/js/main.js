@@ -59,13 +59,13 @@ for (var i = 0; i < howManyJobs; i++) {
   var jobCard = document.createElement('div');
   jobCard.className = 'job-card';
   jobCard.innerHTML =
-    '<img class="job-logo" src="assets/images/job-logo.png" alt="Premium Labels Limited">' +
+    '<img class="job-logo" src="assets/images/job-logo.png" alt="Premium Labels Limited" loading="lazy">' +
     '<h3>Creative Art Designer</h3>' +
     '<div class="job-company">Premium Labels Limited</div>' +
     '<div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.</div>' +
     '<div class="job-nature">Job Nature: Full time</div>' +
-    '<div class="job-meta loc d-flex vertical-center"><img src="assets/images/icons/icon-map.png" alt="">56/8, Panthapath Dhanmondi Dhaka</div>' +
-    '<div class="job-meta price d-flex vertical-center"><img src="assets/images/icons/icon-money.png" alt="">15k - 25k</div>' +
+    '<div class="job-meta loc d-flex vertical-center"><img src="assets/images/icons/icon-map.png" alt="" loading="lazy">56/8, Panthapath Dhanmondi Dhaka</div>' +
+    '<div class="job-meta price d-flex vertical-center"><img src="assets/images/icons/icon-money.png" alt="" loading="lazy">15k - 25k</div>' +
     '<div class="job-tags-col d-flex flex-column">' +
       '<div class="job-tags-row d-flex">' +
         '<span class="tag-art d-flex item-center">Art</span>' +
@@ -75,7 +75,7 @@ for (var i = 0; i < howManyJobs; i++) {
     '</div>' +
     '<div class="job-right">' +
       '<div class="job-actions d-flex">' +
-        '<div class="fav d-flex item-center"><img src="assets/images/icons/icon-heart.png" alt=""></div>' +
+        '<div class="fav d-flex item-center"><img src="assets/images/icons/icon-heart.png" alt="" loading="lazy"></div>' +
         '<div class="apply d-flex item-center">Apply</div>' +
       '</div>' +
     '</div>';
@@ -146,9 +146,9 @@ for (var i = 0; i < blogPhotos.length; i++) {
     '<h4>Home Audio Recording For Everyone</h4>' +
     '<div class="blog-meta">' +
       '<span class="meta-time">02 Hours ago</span>' +
-      '<img class="meta-icon heart" src="assets/images/icons/icon-heart-white.png" alt="">' +
+      '<img class="meta-icon heart" src="assets/images/icons/icon-heart-white.png" alt="" loading="lazy">' +
       '<span class="meta-num likes">06</span>' +
-      '<img class="meta-icon comment" src="assets/images/icons/icon-comment-white.png" alt="">' +
+      '<img class="meta-icon comment" src="assets/images/icons/icon-comment-white.png" alt="" loading="lazy">' +
       '<span class="meta-num comments">02</span>' +
     '</div>';
   blogListBox.appendChild(blogCard);
