@@ -1,10 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Listing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="page-outer">
+<div class="page" id="page">
+
+  <div class="hero-wrap">
+    <section class="hero">
+      <img class="hero-bg-photo" src="assets/images/banner-bg.jpg" alt="">
+      <div class="hero-inner">
+        <h1 class="hero-title"><span>1500+</span> Jobs posted last week</h1>
+        <div class="hero-form d-flex vertical-center">
+          <div class="field d-flex vertical-center"><input type="text" placeholder="What are you looking for?" style="border:none;background:transparent;width:100%;font:inherit;color:inherit;outline:none;"></div>
+          <div class="field select d-flex vertical-center justify-between" id="areaField">
+            <span class="field-label">Select area</span>
+            <div class="field-dropdown" id="areaDropdown">
+              <div data-value="Dhaka">Dhaka</div>
+              <div data-value="Rajshahi">Rajshahi</div>
+              <div data-value="Barishal">Barishal</div>
+              <div data-value="Noakhali">Noakhali</div>
+            </div>
+          </div>
+          <div class="field select d-flex vertical-center justify-between" id="catField">
+            <span class="field-label">All Category</span>
+            <div class="field-dropdown" id="catDropdown">
+              <div data-value="Medical">Medical</div>
+              <div data-value="Technology">Technology</div>
+              <div data-value="Goverment">Goverment</div>
+              <div data-value="Development">Development</div>
+            </div>
+          </div>
+          <button class="btn-search d-flex vertical-center" id="searchBtn">
+            <svg class="icon-svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.4"/><line x1="9.7" y1="9.7" x2="13" y2="13" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
             Search
           </button>
         </div>
         <div class="hero-tags text-center">Search by tags: <span>Tecnology, Business, Consulting, IT Company, Design, Development</span></div>
       </div>
     </section>
- 
+
     <header class="site-header">
       <div class="wrap d-flex vertical-center justify-between">
         <a href="#" class="logo d-flex vertical-center">
@@ -26,10 +68,161 @@
       </div>
     </header>
   </div>
- 
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-box">
+      <div class="modal-close d-flex item-center" id="modalClose">&times;</div>
+      <h3 id="modalTitle">Увійти</h3>
+      <form id="modalForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="submit" id="modalSubmit">Увійти</button>
+      </form>
+      <div class="modal-note">Це демо-макет — форма нічого нікуди не надсилає.</div>
+    </div>
+  </div>
+
+  <section class="features">
+    <div class="wrap d-flex">
+      <div class="feature-card d-flex flex-column item-center text-center"><h4>Searching</h4><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing.</p></div>
+      <div class="feature-card d-flex flex-column item-center text-center"><h4>Applying</h4><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing.</p></div>
+      <div class="feature-card d-flex flex-column item-center text-center"><h4>Security</h4><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing.</p></div>
+      <div class="feature-card d-flex flex-column item-center text-center"><h4>Notifications</h4><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing.</p></div>
+    </div>
+  </section>
+
+  <section class="popular-post">
+    <div class="wrap">
+      <div class="pp-track d-flex" id="ppTrack"></div>
+      <div class="pp-dots d-flex justify-center"><span class="active"></span><span></span><span></span></div>
+    </div>
+  </section>
+
+  <section class="feature-cat text-center">
+    <h2>Featured Job Categories</h2>
+    <div class="sub">Who are in extremely love with eco friendly system.</div>
+    <div class="wrap">
+      <div class="cat-grid d-flex" id="catGrid"></div>
+    </div>
+  </section>
+
+  <section class="post-section" id="jobs-section">
+    <div class="wrap d-flex">
+      <div class="post-main">
+        <div class="post-filters d-flex">
+          <button>Recent</button><button>Full Time</button><button>Intern</button><button>part Time</button>
+        </div>
+        <div id="jobList"></div>
+        <a href="#" class="load-more">Load More job Posts</a>
+      </div>
+      <div class="post-sidebar">
+        <div class="side-box">
+          <h3>Jobs by Location</h3>
+          <ul class="side-list" id="locList"></ul>
+        </div>
+        <div class="side-box top-post-card">
+          <h3>Top rated job posts</h3>
+          <div class="top-post-fallback d-flex item-center">CREATIVE</div>
+          <div class="top-post-body">
+            <h4>Creative Art Designer</h4>
+            <div class="job-company">Premium Labels Limited</div>
+            <div class="job-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.</div>
+            <div class="job-nature">Job Nature: Full time</div>
+            <div class="job-meta loc d-flex vertical-center"><img src="assets/images/icons/icon-map.png" alt="">56/8, Panthapath Dhanmondi Dhaka</div>
+            <div class="job-meta price d-flex vertical-center"><img src="assets/images/icons/icon-money.png" alt="">15k - 25k</div>
+            <a href="#" class="apply-job d-flex item-center">Apply job</a>
+          </div>
+          <div class="side-dots d-flex"><span class="active"></span><span></span><span></span></div>
+        </div>
+        <div class="side-box">
+          <h3>Jobs by Category</h3>
+          <ul class="side-list" id="catList"></ul>
+        </div>
+        <div class="side-box">
+          <h3>Carrer Advice Blog</h3>
+          <div id="blogList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Join us today without any hesitation</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    <div class="cta-buttons d-flex justify-center">
+      <a href="#" class="d-flex vertical-center">I am a Candidate</a>
+      <a href="#" class="d-flex vertical-center">Request Free Demo</a>
+    </div>
+  </section>
+
+  <section class="download">
+    <div class="wrap d-flex vertical-center">
+      <div class="phone-mock">
+        <img src="assets/images/phone-mock.png" alt="Job Listing App">
+      </div>
+      <div class="download-text">
+        <div class="download-text-top">
+          <h2>Download the<br>Job Listing App Today!</h2>
+          <p>It won't be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights so far as its popularity and technological advancement are concerned.</p>
+        </div>
+        <div class="store-buttons">
+          <div class="store-btn d-flex vertical-center">
+            <img class="store-icon apple" src="assets/images/icons/icon-apple.png" alt="">
+            <span class="store-text"><span class="top">Available</span><span class="bottom">on App Store</span></span>
+          </div>
+          <div class="store-btn d-flex vertical-center">
+            <img class="store-icon android" src="assets/images/icons/icon-android.png" alt="">
+            <span class="store-text"><span class="top">Available</span><span class="bottom">on Play Store</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap d-flex">
+      <div class="footer-col">
+        <h4>Top Products</h4>
+        <ul class="footer-links">
+          <li><a href="#">Managed Website</a></li>
+          <li><a href="#">Manage Reputation</a></li>
+          <li><a href="#">Power Tools</a></li>
+          <li><a href="#">Marketing Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter">
+        <h4>Newsletter</h4>
+        <p>You can trust us. we only send promo offers, not a single spam.</p>
+        <div class="newsletter-form d-flex">
+          <input type="email" placeholder="Enter Email">
+          <button class="d-flex vertical-center">Subscribe
+            <svg width="12.95" height="9.11" viewBox="0 0 13 10" fill="none"><path d="M0.7 5h10.5M7.3 1.3l3.9 3.7-3.9 3.7" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Instagram Feed</h4>
+        <div class="insta-grid" id="instaGrid"></div>
+      </div>
+    </div>
+    <div class="wrap footer-bottom d-flex vertical-center justify-between">
+      <div class="copy d-flex vertical-center">Copyright ©2026 All rights reserved | This template is made with
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="#49e4fa"><path d="M7 12S1 8 1 4.5C1 2.5 2.5 1 4.5 1 6 1 7 2 7 2s1-1 2.5-1C11.5 1 13 2.5 13 4.5 13 8 7 12 7 12z"/></svg>
+      </div>
+      <div class="social-links d-flex">
+        <a href="#" class="d-flex item-center"><svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 1H5.5C3.6 1 2 2.6 2 4.5V6H0v2h2v6h2V8h2.3L7 6H4V4.5c0-.6.4-1 1-1H7V1z" fill="#fff"/></svg></a>
+        <a href="#" class="d-flex item-center"><svg width="13" height="14" viewBox="0 0 14 14" fill="none"><path d="M14 2.7c-.5.2-1 .4-1.6.5.6-.4 1-.9 1.2-1.6-.5.3-1.1.6-1.8.7C11.3 1.6 10.6 1.3 9.8 1.3c-1.5 0-2.8 1.2-2.8 2.8 0 .2 0 .4.1.6C4.7 4.6 2.5 3.4 1 1.6c-.3.4-.4.9-.4 1.4 0 1 .5 1.8 1.2 2.3-.4 0-.8-.1-1.2-.3v.1c0 1.3 1 2.4 2.2 2.7-.2.1-.5.1-.8.1-.2 0-.4 0-.6-.1.4 1.1 1.4 1.9 2.7 1.9C3 10.6 1.8 11 .5 11c-.2 0-.4 0-.5 0 1.2.8 2.6 1.2 4.2 1.2 5 0 7.7-4.1 7.7-7.7v-.4c.5-.4 1-.9 1.1-1.4z" fill="#fff"/></svg></a>
+        <a href="#" class="d-flex item-center"><img src="assets/images/icons/icon-dribbble.png" width="12" height="14" alt=""></a>
+        <a href="#" class="d-flex item-center"><img src="assets/images/icons/icon-behance.png" width="16" height="14" alt=""></a>
+      </div>
+    </div>
+  </footer>
+
 </div>
 </div>
- 
+
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
- 
+
