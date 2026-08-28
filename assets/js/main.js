@@ -225,47 +225,6 @@ document.getElementById('searchBtn').addEventListener('click', function (event) 
   }
 });
 
-// ---- Sign up / Login popup window (this is just a demo, it does not send data anywhere) ----
-
-var authModal = document.getElementById('authModal');
-var modalTitle = document.getElementById('modalTitle');
-var modalSubmit = document.getElementById('modalSubmit');
-var modalForm = document.getElementById('modalForm');
-
-var modalButtons = document.querySelectorAll('.js-modal');
-for (var i = 0; i < modalButtons.length; i++) {
-  modalButtons[i].addEventListener('click', function (event) {
-    event.preventDefault();
-    var modalType = event.currentTarget.dataset.modal;
-
-    if (modalType === 'signup') {
-      modalTitle.textContent = 'Реєстрація';
-      modalSubmit.textContent = 'Зареєструватися';
-    } else {
-      modalTitle.textContent = 'Увійти';
-      modalSubmit.textContent = 'Увійти';
-    }
-
-    authModal.classList.add('open');
-  });
-}
-
-document.getElementById('modalClose').addEventListener('click', function () {
-  authModal.classList.remove('open');
-});
-
-authModal.addEventListener('click', function (event) {
-  if (event.target === authModal) {
-    authModal.classList.remove('open');
-  }
-});
-
-modalForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  modalTitle.textContent = 'Дякуємо!';
-  modalForm.innerHTML = '<p style="text-align:center;color:#555;font-size:14px;margin-bottom:10px;">Це демо-макет — реальної реєстрації/входу тут немає.</p>';
-});
-
 // ---- Make the page fit the screen ----
 // The whole design is built at a fixed width of 1920px, so here we shrink
 // (or grow) it with a CSS transform to match the real width of the browser window.
